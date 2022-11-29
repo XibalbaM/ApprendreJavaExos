@@ -1,20 +1,18 @@
 package fr.xibalba.apprendreJavaExos;
 
-import fr.xibalba.apprendreJavaExos.objets.*;
-
 public class Main {
 
     public static void main(String[] args) {
 
-        StationDeRecyclage stationDeRecyclage = new StationDeRecyclage();
-        stationDeRecyclage.arrivage(new BoiteDeConserve());
-        stationDeRecyclage.arrivage(new BoiteDeSardines());
-        stationDeRecyclage.arrivage(new BoiteEnVerre());
-        stationDeRecyclage.arrivage(new BouteilleEnPET());
-        stationDeRecyclage.arrivage(new PneuDeVelo());
-        stationDeRecyclage.arrivage(new TasDeFeuille());
-        stationDeRecyclage.arrivage(new VieuxJournal());
-
-        stationDeRecyclage.recycler();
+        Epicerie epicerie = new Epicerie("Epicerie Xibalba");
+        Produit produit = new ProduitAlimentaire(10);
+        System.out.println("Le produit a été vendu au prix de " + produit.prixTTC + "€");
+        Produit produit2 = new PlatPrepare(10);
+        System.out.println("Le produit a été vendu au prix de " + produit2.prixTTC + "€");
+        Produit produit4 = new ProduitAlimentaire(10, 10);
+        System.out.println("Le produit a été vendu au prix de " + produit4.prixTTC + "€");
+        Produit produit3 = new PlatPrepare(10, 10);
+        System.out.println("Le produit a été vendu au prix de " + produit3.prixTTC + "€");
+        System.out.println("Le chiffre d'affaire de l'épicerie " + epicerie.getNom() + " est de " + Epicerie.getChiffreAffaire() + "€.");
     }
 }
