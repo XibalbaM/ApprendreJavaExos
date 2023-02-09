@@ -4,12 +4,9 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Carte carte1 = new CarteBonneAnnee("Robert");
-        Carte carte2 = new CarteAnniversaire("Robert");
-
-        GrandParent grandParent = new GrandParent();
-        grandParent.souhaiterEvenement(carte1);
-        grandParent.souhaiterEvenement(carte2);
-        grandParent.souhaiterEvenement(carte2);
+        System.out.println(PierrePapierCiseau.CISEAU.bat(PierrePapierCiseau.CISEAU));
+        System.out.println(PierrePapierCiseau.PIERRE.bat(PierrePapierCiseau.PAPIER));
+        System.out.println(PierrePapierCiseau.PAPIER.bat(PierrePapierCiseau.PIERRE));
+        System.out.println(PierrePapierCiseau.PIERRE.bat(PierrePapierCiseau.CISEAU));
     }
 }
