@@ -14,7 +14,6 @@ public enum PierrePapierCiseau {
         int value = thing.ordinal() + 1;
         if (value >= PierrePapierCiseau.values().length)
             value = 0;
-        System.out.println(value);
         return value == this.ordinal() ? Result.BAT : Result.PERD;
     }
 
